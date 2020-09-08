@@ -10,7 +10,7 @@ app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
-const { notes } = require('./data/db/db.json');
+const { notes } = require('./data/db');
 
 function createNewNote(body, noteArray) {
     const note = body;
